@@ -1,0 +1,55 @@
+name: Build and Deploy
+
+# 触发条件：在 push 到 master 分支后
+on: 
+  # 手动模式
+  # workflow_dispatch:
+  # 自动模式
+  push:
+      branches:
+        - master
+
+# 任务
+jobs:
+  build-and-deploy:
+    # 服务器环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1 
+        with:
+          persist-credentials: false
+
+      # 生成静态文件
+      - name: Install and Build 🔧 
+        run:  npm install && npm run build
+
+      # 部署到 GitHub Pages
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages 
+          FOLDER: public 
+      
+      # 部署到 Gitee Pages
+      - name: Sync to Gitee 💕
+        uses: wearerequired/git-mirror-action@master
+        env:
+            # 注意在 Settings->Secrets 配置 SSH_PRIVATE_KEY
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        with:
+            # GitHub 源仓库地址
+            source-repo: "git@github.com:chen-can/chen-can.github.io.git"
+            # Gitee 目标仓库地址
+            destination-repo: "git@gitee.com:chencan123/chencan123.git"
+
+      # Gitee 仓库更新并自动部署     
+      - name: reload
+        uses: mizuka-wu/gitee-pages-action@v1.0.0
+        with:
+          repository: chencan123/chencan123
+          cookie: ${{ secrets.GITEE_COOKIE }}
+          branch: gh-pages
+
