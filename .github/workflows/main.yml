@@ -8,7 +8,8 @@ on:
   push:
       branches:
         - master
-
+env: # 设置环境变量
+  TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用时区时间）
 # 任务
 jobs:
   build-and-deploy:
@@ -19,6 +20,7 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1 
         with:
+          fetch-depth: 0
           persist-credentials: false
 
       # 生成静态文件
