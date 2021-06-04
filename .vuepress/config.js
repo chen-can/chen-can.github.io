@@ -35,22 +35,27 @@ module.exports = {
       {
         text: "文档",
         icon: "reco-message",
-        items: [
-          {
-            text: "vuepress-reco",
-            link: "/docs/theme-reco/",
-          },
-        ],
+        link: "https://chen-can.github.io/el-admin-doc",
       },
       {
         text: "GitHub",
         icon: "reco-github",
         link: "https://github.com/chen-can/chen-can.github.io",
       },
+      {
+        text: '项目',
+        items: [
+            {
+                text: 'vue2-element-admin',
+                link: 'https://chen-can.github.io/vue2-element-admin'
+            },
+            // {
+            //     text: 'vue2-vant-h5',
+            //     link: 'https://chen-can.github.io/vue2-vant-h5'
+            // }
+        ]
+    }
     ],
-    sidebar: {
-      "/docs/theme-reco/": ["", "theme"],
-    },
     type: "blog",
     blogConfig: {
       category: {
