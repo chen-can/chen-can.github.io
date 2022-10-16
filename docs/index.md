@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: 点击开始修炼
-      link: /frontend/javascript
+      link: /FrontEnd/JavaScript/JS_Note
     - theme: alt
       text: 关于我
       link: /About/
