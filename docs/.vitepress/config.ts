@@ -136,8 +136,8 @@ const config = {
               { text: "npm", link: "/Efficiency/npm" },
               { text: "yarn", link: "/Efficiency/yarn" },
               { text: "pnpm", link: "/Efficiency/pnpm" },
+              { text: "git", link: "/Efficiency/git" },
               // { text: "zsh", link: "/Efficiency/zsh" },
-              // { text: "git", link: "/Efficiency/git" },
             ],
           },
         ],
@@ -224,14 +224,14 @@ const config = {
               text: "前端面试题",
               link: "/Blog/面试题",
             },
-            {
-              text: "vue2面试题原理解析",
-              link: "/Blog/vue2-interview",
-            },
-            {
-              text: "vue3面试题原理解析",
-              link: "/Blog/vue3-interview",
-            },
+            // {
+            //   text: "vue2面试题原理解析",
+            //   link: "/Blog/vue2-interview",
+            // },
+            // {
+            //   text: "vue3面试题原理解析",
+            //   link: "/Blog/vue3-interview",
+            // },
             {
               text: "前端常见单词",
               link: "/Blog/常见单词",
@@ -243,6 +243,10 @@ const config = {
             {
               text: "Github 使用技巧",
               link: "/Blog/github",
+            },
+            {
+              text: "SSH - 公钥 私钥",
+              link: "/Blog/SSH",
             },
           ],
         },

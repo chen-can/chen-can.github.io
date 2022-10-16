@@ -66,5 +66,5 @@ boo = null
 
 为了实现继承的方式，通过 `__proto__` 将对象和原型联系起来组成原型链，得以让对象可以访问到不属于自己的属性。
 
-![图片](./img/prototype.png)
+![图片](img/prototype.png)
 

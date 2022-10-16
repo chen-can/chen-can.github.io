@@ -16,7 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.zshrc
 ```
 windows 用户请下载安装 [nvm-windows](https://github.com/coreybutler/nvm-windows/releases)
-![图 2](./img/6979e94c4dad37d3f5de2fc756e81b18afbbe75c5463fed3321c7e89f9e5c35c.6979e94c.png)  
+![图 2](img/6979e94c4dad37d3f5de2fc756e81b18afbbe75c5463fed3321c7e89f9e5c35c.6979e94c.png)  
 ::: tip 友情提示
 先卸载原本电脑上的node，然后在进行nvm安装
 :::
