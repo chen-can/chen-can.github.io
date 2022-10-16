@@ -152,16 +152,7 @@ const config = {
       },
       {
         text: "关于我",
-        items: [
-          {
-            text: "码云Gitee",
-            link: "https://gitee.com/chencan123",
-          },
-          {
-            text: "源码",
-            link: "https://gitee.com/chencan123/chencan123",
-          },
-        ],
+        link: "/About/index",
       },
     ],
     sidebar: {

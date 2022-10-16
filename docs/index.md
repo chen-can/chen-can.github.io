@@ -10,7 +10,7 @@ hero:
       link: /frontend/javascript
     - theme: alt
       text: 关于我
-      link: /me/
+      link: /About/
 features:
   - icon: ⚡️
     title: 记录知识
