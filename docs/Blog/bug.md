@@ -11,6 +11,9 @@ A：实时改变请求的 URL ，只要URL改变，就不会被缓存，可以�
 Q：当`<input type="number"  maxlength="5" />`时maxlength失效，长度可以无限输入    
 A：`<input type="number" oninput="if(value.length>5)value=value.slice(0,5)" />`  
 
+Q：vue-amap页面刷新后，地图组件会报错  
+A：localStorage.clear() //修复报错  
+
 Q：node node-sass sass-loader版本对应问题，导致node-sass报错  
 A：具体对应版本如下图：
 | NodeJS | Supported node-sass version | Node Module |

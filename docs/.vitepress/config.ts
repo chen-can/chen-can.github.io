@@ -218,14 +218,6 @@ const config = {
               text: "前端面试题",
               link: "/Blog/面试题",
             },
-            // {
-            //   text: "vue2面试题原理解析",
-            //   link: "/Blog/vue2-interview",
-            // },
-            // {
-            //   text: "vue3面试题原理解析",
-            //   link: "/Blog/vue3-interview",
-            // },
             {
               text: "前端常见单词",
               link: "/Blog/常见单词",
