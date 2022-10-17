@@ -1,7 +1,6 @@
 /**
  * @type {import('vitepress').UserConfig}
  */
-
 const config = {
   title: "陈灿的博客", //标题
   titleTemplate: "陈灿的博客",
@@ -113,8 +112,8 @@ const config = {
           {
             text: "编程软件",
             items: [
-              // { text: "VSCode", link: "/Soft/VSCode" },
-              { text: "Chrome", link: "/Soft/Chrome/插件" },
+              { text: "VSCode", link: "/Soft/VSCode/plug" },
+              { text: "Chrome", link: "/Soft/Chrome/plug" },
               // { text: "SwitchHosts", link: "/Soft/SwitchHosts" },
               // { text: "iTerm2", link: "/Soft/iTerm2" },
               // { text: "Postman", link: "/Soft/Postman" },
@@ -172,6 +171,10 @@ const config = {
             {
               text: "Es6系列7种",
               link: "/FrontEnd/JavaScript/JS_ES6",
+            },
+            {
+              text: "工具库",
+              link: "/FrontEnd/JavaScript/JS_Tools",
             },
           ],
         },
@@ -249,11 +252,31 @@ const config = {
           items: [
             {
               text: "插件",
-              link: "/Soft/Chrome/插件",
+              link: "/Soft/Chrome/plug",
             },
             {
               text: "配置",
-              link: "/Soft/Chrome/配置",
+              link: "/Soft/Chrome/deploy",
+            },
+          ],
+        },
+      ],
+      "/Soft/VSCode": [
+        {
+          collapsible: true,
+          text: "VSCode",
+          items: [
+            {
+              text: "插件",
+              link: "/Soft/VSCode/plug",
+            },
+            {
+              text: "配置",
+              link: "/Soft/VSCode/deploy",
+            },
+            {
+              text: "VSCode 同步设置",
+              link: "/Soft/VSCode/VSCode 同步设置",
             },
           ],
         },

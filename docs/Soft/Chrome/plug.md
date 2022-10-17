@@ -29,7 +29,6 @@ FireShot（捕捉网页截图）
 掘金  
 简悦 - SimpRead（进入阅读模式）  
 ## 程序员
-Allow CORS: Access-Control-Allow-Origin（允许跨域）  
 Awesome Autocomplete for GitHub（github智能搜索插件）  
 GitCodeTree（码云文件树插件）  
 Gitlab TreeView（gitlab文件树插件）  
@@ -41,7 +40,6 @@ GitZip for github（下载单个GitHub文件）
 FeHelper（前端助手）
 React Developer Tools（react 开发者工具）  
 Vue.js devtools（vue 开发者工具）  
-极简二维码（显示当前网页二维码）  
 Sourcegraph（github代码查看）  
 User-Agent Switcher（ua切换）  
 Web Maker（网页编辑器）  
