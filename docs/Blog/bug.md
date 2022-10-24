@@ -34,3 +34,6 @@ A：具体对应版本如下图：
 | Node 8 | sass-loader 7.3.1 | node-sass 4.7.2 |
 | Node 14 | sass-loader 7.3.1 | node-sass 4.14.1 |
 | Node 16 | sass-loader 10.0.1 | node-sass 6.0.1 |
+
+Q：小程序setData 数据传输长度超过200kb会出现输入框字体跳动  
+A：减小setData 数据传输长度
