@@ -215,8 +215,8 @@ const config = {
               link: "/Blog/package-manager",
             },
             {
-              text: "前端面试题",
-              link: "/Blog/面试题",
+              text: "前端八股文",
+              link: "/Blog/八股文",
             },
             {
               text: "前端常见单词",
