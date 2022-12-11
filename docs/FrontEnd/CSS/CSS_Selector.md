@@ -22,6 +22,14 @@ a[class^=xxg]{
 - demo:nth-last-child(n) 选择器匹配属于其元素的第 N 个子元素的每个元素，从最后一个子元素开始计数；
 - demo:nth-of-type(n) 选择器匹配属于父元素的特定类型的第 N 个子元素的每个元素
 
+`nth-child n的使用方法`  
+1. :nth-child(1) 选择第一个子元素
+2. :nth-child(-n+2) 选择前两个子元素
+3. :nth-child(n+2) 选择后两个子元素
+4. :nth-child(2n) 选择列表中为偶数的元素===even
+5. :nth-child(2n-1) 选择列表中为奇数的元素===odd
+6. :nth-child(n+6):nth-child(-n+9) 结合使用，选择一列元素中的中间几个
+> n和js中index一样从0开始
 
 ## before && after
 
@@ -62,7 +70,7 @@ a[class^=xxg]{
 ## CSS3伪类选择器
 
 | 伪类选择器            |	说明 |
-| :-:                   | :-: |
+| ---                  | --- |
 | a:root                | 	伪类选择器 等同于选择html | 
 | a:not	                | 否定选择器 就是不选择这个 | 
 | a:empty               | 	选择没有任何内容的容器 | 

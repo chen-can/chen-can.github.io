@@ -176,6 +176,11 @@ const config = {
               text: "工具库",
               link: "/FrontEnd/JavaScript/JS_Tools",
             },
+            {
+              text: "代码简写技巧",
+              link: "/FrontEnd/JavaScript/JS_Abbreviation",
+            },
+             
           ],
         },
       ],

@@ -37,3 +37,6 @@ A：具体对应版本如下图：
 
 Q：小程序setData 数据传输长度超过200kb会出现输入框字体跳动  
 A：减小setData 数据传输长度
+
+Q:字体小于12px后包裹在div内字体偏移
+A:使用 `transform-origin: left center;` 改变缩放中心点
