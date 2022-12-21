@@ -221,11 +221,15 @@ const config = {
             },
             {
               text: "前端八股文",
-              link: "/Blog/八股文",
+              link: "/Blog/question",
             },
             {
               text: "前端常见单词",
-              link: "/Blog/常见单词",
+              link: "/Blog/word",
+            },
+            {
+              text: "前端实用功能",
+              link: "/Blog/functions",
             },
             {
               text: "Linux 常用命令",

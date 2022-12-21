@@ -12,7 +12,14 @@ Q：当`<input type="number"  maxlength="5" />`时maxlength失效，长度可以
 A：`<input type="number" oninput="if(value.length>5)value=value.slice(0,5)" />`  
 
 Q：vue-amap页面刷新后，地图组件会报错  
-A：localStorage.clear() //修复报错  
+A：localStorage.clear() //修复报错 
+
+Q：不兼容JS中的new Date('2018-01-12 10:09:11')返回错误"Invalid Date"
+A：将xxxx-xx-xx的时间格式，转换为 xxxx/xx/xx的格式或拆成数组例如：
+```javascript
+let arr = "2018-01-12 10:09:11".split(/[- : \/]/),
+date = new Date(arr[0], arr[1]-1, arr[2], arr[3], arr[4], arr[5]);
+``` 
 
 Q：node node-sass sass-loader版本对应问题，导致node-sass报错  
 A：具体对应版本如下图：
@@ -38,5 +45,14 @@ A：具体对应版本如下图：
 Q：小程序setData 数据传输长度超过200kb会出现输入框字体跳动  
 A：减小setData 数据传输长度
 
-Q:字体小于12px后包裹在div内字体偏移
+Q:字体小于12px后包裹在div内字体偏移  
 A:使用 `transform-origin: left center;` 改变缩放中心点
+
+Q:字体小于12px后flex剧中  
+A:使用 ` width: calc(100% / 0.71);` 0.71是缩放比例  
+
+Q:display:flex布局下white-space:nowrap失效内容区溢出  
+A:给父元素设置一下min-width: 0或使用多行文字… 省略的方法
+
+Q:正则表达式开启全局g时验证结果错误  
+A:在匹配之前设置lastIndex=0或者删除g
