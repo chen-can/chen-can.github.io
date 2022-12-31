@@ -109,3 +109,133 @@ export default {
   }
 }
 ```
+
+## 国际化 csv转i18n
+
+> [i18n官网](https://kazupon.github.io/vue-i18n/zh/started.html)
+
+```javascript
+// main.js
+import i18n from './i18n'
+
+new Vue({
+    i18n,
+    render: h => h(App)
+}).$mount('#app')
+```
+
+```javascript
+// i18n.js
+import Vue from 'vue'
+import VueI18n from 'vue-i18n'
+import axios from "axios";
+Vue.use(VueI18n);
+const i18n = new VueI18n({
+    locale: localStorage.getItem('locale') || 'zh-cn', //设置默认语言
+});
+
+i18n.setI18nLanguage = (lang) => {
+    i18n.locale = lang
+    document.querySelector('html').setAttribute('lang', lang) //设置html的语言
+    localStorage.setItem('locale', lang)
+}
+class Translate {
+    constructor() {
+        this.messages = {};
+        this.loadedLanguages = [];
+    }
+    parseSheet(data) {
+        data.forEach((row, rowIndex) => {
+            let key;
+            row.forEach((col, colIndex) => {
+                // 第一行，文件名
+                if (rowIndex === 0 && colIndex !== 0) {
+                    if (!(col in this.messages)) {
+                        this.messages[col] = {};
+                        this.loadedLanguages.push(col);
+                    }
+                }
+
+                if (rowIndex >= 1) {
+                    if (colIndex === 0) {
+                        key = col;
+                    } else {
+                        const lang = this.loadedLanguages[colIndex - 1];
+                        this.messages[lang][key] = col;
+                    }
+                }
+            })
+        });
+
+        return this;
+    }
+}
+
+axios.get('/language.csv').then(({
+    data
+}) => {
+    i18n.setI18nLanguage(i18n.locale)
+    let sheets = CSVToArray(data);
+    let translate = new Translate().parseSheet(sheets);
+    for (const key in translate.messages) {
+        if (Object.hasOwnProperty.call(translate.messages, key)) {
+            const message = translate.messages[key];
+            i18n.setLocaleMessage(key, message)
+        }
+    }
+})
+
+function CSVToArray(strData, strDelimiter) {
+    strDelimiter = (strDelimiter || ",");
+    let objPattern = new RegExp(
+        (
+            "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+            "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
+            "([^\"\\" + strDelimiter + "\\r\\n]*))"
+        ),
+        "gi"
+    );
+
+    let arrData = [
+        []
+    ];
+    let arrMatches = null;
+    let strMatchedValue = ''
+    while (arrMatches = objPattern.exec(strData)) {
+        let strMatchedDelimiter = arrMatches[1];
+        if (strMatchedDelimiter.length && (strMatchedDelimiter != strDelimiter)) {
+            arrData.push([]);
+        }
+
+        if (arrMatches[2]) {
+            strMatchedValue = arrMatches[2].replace(new RegExp("\"\"", "g"), "\"");
+        } else {
+            strMatchedValue = arrMatches[3];
+        }
+        arrData[arrData.length - 1].push(strMatchedValue);
+    }
+
+    return arrData;
+}
+
+export default i18n;
+```
+
+```vue
+<template>
+    <div>
+        {{ $t('apple') }}
+    </div>
+</template>
+
+<script>
+export default {
+    methods: {
+      // 切换语言
+        handleChange(lang) {
+            this.$i18n.setI18nLanguage(lang)
+        },
+    },
+};
+</script>
+```
