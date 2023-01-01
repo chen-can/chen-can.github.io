@@ -365,3 +365,43 @@ let filterArray = arr.filter(function(value) {
 let filterArray = arr.filter(Boolean);
 // filterArray = [12, "xyz", -25, 0.5]
 ```
+
+## 21. 使用对象简化代码分支
+
+```javascript
+//常规
+switch (new Date().getDay()) {
+    case 0:
+        day = "星期天";
+        break;
+    case 1:
+        day = "星期一";
+        break;
+    case 2:
+        day = "星期二";
+        break;
+    case 3:
+        day = "星期三";
+        break;
+    case 4:
+        day = "星期四";
+        break;
+    case 5:
+        day = "星期五";
+        break;
+    case 6:
+        day = "星期六";
+}
+
+// 简写
+const map = {
+    0: "星期天",
+    1: "星期一",
+    2: "星期二",
+    3: "星期三",
+    4: "星期四",
+    5: "星期五",
+    6: "星期六"
+}
+day = map[new Date().getDay()]
+```
