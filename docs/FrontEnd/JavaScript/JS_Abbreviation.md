@@ -366,42 +366,53 @@ let filterArray = arr.filter(Boolean);
 // filterArray = [12, "xyz", -25, 0.5]
 ```
 
-## 21. 使用对象简化代码分支
+## 21. switch 简写
 
 ```javascript
 //常规
-switch (new Date().getDay()) {
-    case 0:
-        day = "星期天";
-        break;
-    case 1:
-        day = "星期一";
-        break;
-    case 2:
-        day = "星期二";
-        break;
-    case 3:
-        day = "星期三";
-        break;
-    case 4:
-        day = "星期四";
-        break;
-    case 5:
-        day = "星期五";
-        break;
-    case 6:
-        day = "星期六";
+switch (a) {
+    case '张三':
+        return 'age是12'
+    case '李四':
+        return 'age是120'
 }
 
 // 简写
 const map = {
-    0: "星期天",
-    1: "星期一",
-    2: "星期二",
-    3: "星期三",
-    4: "星期四",
-    5: "星期五",
-    6: "星期六"
+    '张三': 'age12',
+    '李四': 'age120',
 }
-day = map[new Date().getDay()]
+console.log(map['张三'])
+```
+
+## 22. 对象嵌套属性解构
+
+```javascript
+//常规
+const {
+    info
+} = {
+    name: '张三',
+    age: 13,
+    info: {
+        dec: '描述1',
+        info: '信息'
+    }
+}
+console.log(info.dec) // 描述1
+
+// 简写
+const {
+    info: {
+        dec
+    }
+} = {
+    name: '张三',
+    age: 13,
+    info: {
+        dec: '描述1',
+        info: '信息'
+    }
+}
+console.log(dec) // 描述1
 ```
