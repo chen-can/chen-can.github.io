@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as t,f as n}from"./app.704909db.js";const C=JSON.parse('{"title":"BUG","description":"","frontmatter":{},"headers":[],"relativePath":"Blog/bug.md","lastUpdated":1674267308000}'),l={name:"Blog/bug.md"},o=n("",19),p=[o];function e(r,c,y,d,D,i){return t(),a("div",null,p)}const A=s(l,[["render",e]]);export{C as __pageData,A as default};

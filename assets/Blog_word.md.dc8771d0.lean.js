@@ -1,1 +1,0 @@
-import{_ as e,c as r,o as t,f as o}from"./app.e071b85f.js";const u=JSON.parse('{"title":"常见单词","description":"","frontmatter":{},"headers":[],"relativePath":"Blog/word.md","lastUpdated":1671632578000}'),a={name:"Blog/word.md"},n=o("",2),s=[n];function b(i,c,d,l,_,h){return t(),r("div",null,s)}const f=e(a,[["render",b]]);export{u as __pageData,f as default};
