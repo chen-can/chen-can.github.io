@@ -416,3 +416,13 @@ const {
 }
 console.log(dec) // 描述1
 ```
+## 23. 快速转化布尔值
+
+```javascript
+//常规
+Boolean("1") //true
+
+// 简写
+!!"1" //true
+```
+> 需要注意这种写法只针对数字，如果是布尔字符串需要用到`JSON.parse()`方法
