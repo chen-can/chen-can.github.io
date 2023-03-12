@@ -97,13 +97,6 @@ const config = {
               // { text: "Vue", link: "/FrontEnd/Vue/Vue_Note" },
             ],
           },
-          // {
-          //   text: "依赖包",
-          //   items: [
-          //     { text: "dayjs", link: "/extensions/dayjs" },
-          //     { text: "bcryptjs", link: "/extensions/bcryptjs" },
-          //   ],
-          // }
         ],
       },
       {
@@ -112,18 +105,7 @@ const config = {
           {
             text: "编程软件",
             items: [
-              { text: "VSCode", link: "/Soft/VSCode/plug" },
-              { text: "Chrome", link: "/Soft/Chrome/plug" },
-              // { text: "SwitchHosts", link: "/Soft/SwitchHosts" },
-              // { text: "iTerm2", link: "/Soft/iTerm2" },
-              // { text: "Postman", link: "/Soft/Postman" },
-              // { text: "Charles", link: "/Soft/Charles" },
-              // { text: "FileZilla", link: "/Soft/FileZilla" },
-              // { text: "SnailSvn", link: "/Soft/SnailSvn" },
-              // { text: "Docker", link: "/Soft/Docker" },
-              // { text: "dev-sidcar", link: "/Soft/dev-sidcar" },
-              // { text: "ResponsivelyApp", link: "/Soft/ResponsivelyApp" },
-              // { text: "PicGo", link: "/Soft/PicGo" },
+              { text: "VSCode", link: "/Soft/VSCode/deploy" },
             ],
           },
           {
@@ -145,6 +127,10 @@ const config = {
       //   text: "部署",
       //   items: [{ text: "jenkins", link: "/Deploy/jenkins" }],
       // },
+      {
+        text: "Mac",
+        link: "/Mac/index",
+      },
       {
         text: "文章",
         link: "/Blog/bug",
@@ -200,11 +186,6 @@ const config = {
             { text: "CSS 选择器", link: "/FrontEnd/CSS/CSS_Selector" },
           ],
         },
-        {
-          text: "CSS 公共样式",
-          collapsible: true,
-          items: [{ text: "CSS 公共样式", link: "/FrontEnd/CSS/CSS_Style" }],
-        },
       ],
       "/Blog/": [
         {
@@ -246,31 +227,11 @@ const config = {
           ],
         },
       ],
-      "/Soft/Chrome": [
-        {
-          collapsible: true,
-          text: "Chrome",
-          items: [
-            {
-              text: "插件",
-              link: "/Soft/Chrome/plug",
-            },
-            {
-              text: "配置",
-              link: "/Soft/Chrome/deploy",
-            },
-          ],
-        },
-      ],
       "/Soft/VSCode": [
         {
           collapsible: true,
           text: "VSCode",
           items: [
-            {
-              text: "插件",
-              link: "/Soft/VSCode/plug",
-            },
             {
               text: "配置",
               link: "/Soft/VSCode/deploy",
