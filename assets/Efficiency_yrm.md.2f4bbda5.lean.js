@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,R as p}from"./chunks/framework.5dd80646.js";const d=JSON.parse('{"title":"yrm","description":"","frontmatter":{},"headers":[],"relativePath":"Efficiency/yrm.md","lastUpdated":1665897289000}'),l={name:"Efficiency/yrm.md"},o=p("",16),e=[o];function t(r,c,C,y,i,h){return n(),a("div",null,e)}const m=s(l,[["render",t]]);export{d as __pageData,m as default};

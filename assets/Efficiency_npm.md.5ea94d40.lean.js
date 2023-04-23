@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,R as l}from"./chunks/framework.5dd80646.js";const D=JSON.parse('{"title":"npm","description":"","frontmatter":{},"headers":[],"relativePath":"Efficiency/npm.md","lastUpdated":1665897289000}'),p={name:"Efficiency/npm.md"},e=l("",38),o=[e];function t(c,r,i,C,y,h){return n(),a("div",null,o)}const A=s(p,[["render",t]]);export{D as __pageData,A as default};

@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,R as l}from"./chunks/framework.5dd80646.js";const i=JSON.parse('{"title":"功能","description":"","frontmatter":{},"headers":[],"relativePath":"Blog/functions.md","lastUpdated":1682229676000}'),p={name:"Blog/functions.md"},o=l("",29),e=[o];function t(c,r,F,y,D,C){return a(),n("div",null,e)}const u=s(p,[["render",t]]);export{i as __pageData,u as default};
