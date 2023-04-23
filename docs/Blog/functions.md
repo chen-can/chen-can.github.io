@@ -647,8 +647,8 @@ export default {
         let spriteIconWidth = 146;
         let spriteIconHeight = 146;
         return {
-          width: `${spriteIconWidth * (iconWidth / spriteIconWidth)}px`,
-          height: `${spriteIconHeight * (iconHeight / spriteIconHeight)}px`,
+          width: `${iconWidth}px`,
+          height: `${iconHeight}px`,
           background: `url(${require('@/assets/user.png')}) no-repeat`,
           'background-position': `${(spriteIconX / (spriteWidth - spriteIconWidth)) * 100}% ${(spriteIconY / (spriteHeight - spriteIconHeight)) * 100}%`,
           'background-size': `${spriteWidth * (iconWidth / spriteIconWidth)}px  ${spriteHeight * (iconHeight / spriteIconHeight)}px`,
